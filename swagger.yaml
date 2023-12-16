@@ -36,10 +36,10 @@ paths:
           required: true
           schema:
             type: string
-        - name: api_secret
+        - name: secret_key
           in: query
           required: true
-          description: Your API secret, provided by a Govbuddy administrator
+          description: Your API secret key, provided by a Govbuddy administrator
           schema:
             type: string
         - name: include_inactive
@@ -82,7 +82,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/ApiResponse'          
         '401':
-          description: Invalid api_key or api_secret
+          description: Invalid api_key or secret_key
       security:
         - api_key:
             - read:people
